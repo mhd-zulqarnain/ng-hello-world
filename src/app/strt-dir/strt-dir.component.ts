@@ -18,13 +18,19 @@ import {Component, OnInit} from '@angular/core';
         else block executed
      </h2>
    </ng-template>
+   
+   <div [ngSwitch]="color">
+     <h2 *ngSwitchCase="'red'">the selected color is red</h2>
+     <h2 *ngSwitchCase="'green'">the seleced color is green</h2>
+     <h2 *ngSwitchCase = "'gray'">the selected color is gray</h2>
+   </div>
   `,
     styles: []
 })
 export class StrtDirComponent implements OnInit {
 
     private displayName:boolean = true;
-
+    private color:string="red"
     constructor() {
     }
 
